@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== SWIPER CSS ===============--> 
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Responsive watches website - Bedimcode</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <i class='bx bxs-watch nav__logo-icon'></i> Rolex
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                 <!--   <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#featured" class="nav__link">Featured</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#products" class="nav__link">Products</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#new" class="nav__link">New</a>
+                        </li>
+                    </ul>-->
+
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x' ></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+                    <div class="nav__shop" id="cart-shop">
+                        <i class='bx bx-shopping-bag' ></i>
+                        <span>0</span>
+                    </div>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-grid-alt' ></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="checkout-container">
+            <!-- Left Side -->
+            <form action="process_order.php" method="POST">
+                <div class="checkout-left">
+                    <div class="form-section">
+                        <label for="email" class="form-label">EMAIL</label>
+                        <input type="email" id="email" placeholder="Email Address*" class="form-input">
+                    </div>
+                    <div class="form-section">
+                        <h2 class="section-title">SHIPPING</h2>
+                        <form>
+                            <div class="form-row">
+                                <input type="text" placeholder="First Name" class="form-input">
+                                <input type="text" placeholder="Last Name" class="form-input">
+                            </div>
+                            <input type="text" placeholder="Phone" class="form-input" >
+                            <input type="text" placeholder="Address" class="form-input">
+                            <div class="form-row">
+                                <input type="text" placeholder="City*" class="form-input">
+                                <input type="text" placeholder="ZIP Code" class="form-input">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form-section">
+                        <h2 class="section-title">PAYMENT METHOD</h2>
+                        <div class="payment-option" tabindex="0">
+                            <div class="payment-left">
+                                <p class="payment-title">Credit Card</p>
+                                <p class="payment-subtitle">Secure and encrypted</p>
+                            </div>
+                            <img src="assets/img/google.png" alt="Credit Card" class="payment-img">
+                        </div>
+                        <div class="payment-option long" tabindex="0">
+                            <div class="payment-left">
+                                <p class="payment-title">Pay Over Time</p>
+                                <p class="payment-subtitle">As low as $59/month for 43 months of 0% APR.</p>
+                            </div>
+                            <img src="assets/img/visa.png" alt="Pay Over Time" class="payment-img">
+                        </div>
+                    </div>
+                    <button class="button buttons button--gray button--small checks" >Place Order</button>
+<!-- Popup -->
+<div id="order-success-popup" class="popups hidden">
+    <div class="popup-content">
+        <i class='bx bxs-check-circle popup-icon'></i>
+        <p class="popup-text">Your order has been placed successfully!</p>
+        <button class="popup-button" id="popup-ok-button">OK</button>
+    </div>
+</div>
+                </form>
+                </div>
+                
+            <!-- Right Side -->
+            <div class="checkout-right">
+                <div class="summary-box">
+                    <h2 class="summary-title">CART SUMMARY</h2>
+                    <div class="summary-details">
+                        <p>Longines Rose + Rose Gold</p>
+                        <p class="summary-amount">$2,495.00</p>
+                    </div>
+                    <p class="summary-subtitle">Recently purchased</p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">Our information</h3>
+
+                    <ul class="footer__list">
+                        <li>1234 - Peru</li>
+                        <li>La Libertad 43210</li>
+                        <li>123-456-789</li>
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">About Us</h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">Support Center</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Customer Support</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Copy Right</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Product</h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">Road bikes</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Mountain bikes</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Electric</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Accesories</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Social</h3>
+
+                    <ul class="footer__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+
+                        <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-twitter' ></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-instagram' ></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <span class="footer__copy">&#169; AfreenIlyas. All rigths reserved</span>
+        </footer>
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+
+        <!--=============== POPUP JS===============-->
+        <script src="popup.js"></script>
+    </body>
+  
+</html>
+
+
+
